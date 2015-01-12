@@ -15,4 +15,11 @@ describe(Triangles) do
       expect(test_triangle.isosceles?()).to(eq(true))
     end
   end
+
+  describe('#scalene?') do
+    it('Takes three arguments and if none are equal return true') do
+      test_triangle = Triangles.new(3, 4, 5)
+      expect(test_triangle.scalene?()).to(eq(true))
+    end
+  end
 end
