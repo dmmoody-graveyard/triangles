@@ -22,4 +22,11 @@ describe(Triangles) do
       expect(test_triangle.scalene?()).to(eq(true))
     end
   end
+
+  describe('#triangle?') do
+    it('Takes the sum of two sides and if greater than third, is not a triangle') do
+      test_triangle = Triangles.new(4, 3, 3)
+      expect(test_triangle.triangle?()).to(eq(true))
+    end
+  end
 end
