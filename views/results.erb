@@ -1,3 +1,18 @@
-<h2>Your parcel shipping cost will be:</h2>
+<h2>Your triangle is:</h2>
 
-<%= @ship_cost %>
+<p>Your sides are <%= @side1 %>, <%= @side2 %>, and <%= @side3 %>.</p>
+
+<% if @some_triangle.triangle?() %>
+  <p>This is a triangle</p>
+    <% if @some_triangle.equilateral?() %>
+      <p>Your triangle is equilateral</p>
+    <% elsif @some_triangle.isosceles?() %>
+      <p>Your triangle is an isosceles</p>
+    <% elsif @some_triangle.scalene?() %>
+      <p>Your triangle is a scalene</p>
+    <% else %>
+      <p>Your triangle is identifiable<p>
+    <% end %>
+<% else %>
+  <p>You do not have a triangle<p>
+<% end %>

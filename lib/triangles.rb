@@ -6,8 +6,7 @@ class Triangles
   end
 
   define_method(:triangle?) do
-    if (@side1 + @side2) > @side3 && (@side1 + @side3) > @side2 &&
-      (@side2 + @side3) > @side1
+    if (@side1 + @side2) > @side3 && (@side1 + @side3) > @side2 && (@side2 + @side3) > @side1
       true
     end
   end
